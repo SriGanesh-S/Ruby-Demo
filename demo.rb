@@ -7,8 +7,9 @@ class Demo
            return @instVar=10
        end
           
-      end
+end
       a=Demo.new
+      puts "Instance variable"
       tmp =a.disp
       puts("value=#{tmp}")
       tmp=a.add
