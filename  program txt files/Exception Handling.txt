@@ -1,0 +1,87 @@
+#Exception Handling
+
+#1.raise
+
+print "Enter a Natural Number"
+n=gets.to_i
+if(n!=0)3
+    printf("n=%d",n)
+else 
+    raise "Enter a Natural Number"
+end
+
+##############
+#2.rescue& retry
+begin
+print "Enter a Natural Number"
+n=gets.to_i
+if(n!=0)
+    printf("n=%d",n)
+else 
+    raise "Enter a Natural Number"
+end
+
+rescue 
+    puts"Exception handled"
+    retry
+
+end
+
+###########
+#3.else & ensure
+
+begin
+print "Enter a Natural Number"
+n=gets.to_i
+if(n!=0)
+    printf("n=%d",n)
+else 
+    raise "Enter a Natural Number"
+end
+
+rescue 
+    puts"Exception handled"
+    retry
+else
+    puts"\nNo Exception"
+ensure
+    puts"Exiting..."
+ 
+end
+
+###########
+#4.throw catch
+
+def catch_and_throw(value)
+  
+  puts value
+  a = readline.chomp.to_i
+  
+
+  throw :value_e if a == 0.0
+  return a
+  
+end
+  
+
+catch :value_e do
+  
+
+  number = catch_and_throw("Enter Number: ")
+  print number
+end
+
+
+
+
+#########
+
+a= catch(:divide) do
+            
+	number = gets.chomp.to_i
+	throw :divide if number == 0
+	print "No exception\n"
+	number 
+	
+end
+puts e

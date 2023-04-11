@@ -1,0 +1,12 @@
+require "./Mymodule.rb"
+class Child
+    include Mymodule
+    def mem(a,b)
+     return "constants A:"+a.to_s+" B: "+b.to_s+"\n"
+    end
+    
+end
+ob=Child.new
+print ob.mem(Mymodule::A,Mymodule::B)
+puts Mymodule.disp
+puts ob.disp
