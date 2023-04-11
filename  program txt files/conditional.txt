@@ -1,0 +1,46 @@
+
+#if..else
+age=gets.to_i 
+if(age>18) ; print("Eligible")
+else print("Not eligible")
+end
+ #unless   
+age=gets.to_i
+unless(age>=18)
+     print("not eligible")
+else 
+    print("eigible")
+end
+
+#if..elsif..else
+ n=gets.to_i
+ if(n==0)
+    puts "ZERO"
+  elsif n>0
+    puts "POSITIVE"
+  else
+    puts "NEGATIVE"
+ end
+
+
+#conditional statement
+age=gets.to_i 
+(age>18) ?print("Eligible"): print("Not eligible")
+
+
+
+
+#case
+num=gets.chomp
+case (num)
+ when "1"
+     print("one")
+ when '2'
+     print("two")
+ when '3' 
+     print("three")
+ when '3' 
+     print("four")
+ else
+     print("default")
+end
